@@ -70,7 +70,7 @@ function render(component) {
 
 function renderHeader() {
     const header = document.querySelector('.header');
-    return header.insertAdjacentHTML('afterbegin', '<img src="/img/img_head_bgd.png" alt="" class="header-img">');
+    return header.insertAdjacentHTML('afterbegin', '<img src="https://i.ibb.co/98n9SW1/img-head-bgd.png" alt="" class="header-img">');
 }
 
 function renderMenu() {
