@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(229, 255, 218);
+}
+
+h2 {
+  font-size: 15px;
+  color: rgb(10, 74, 10);
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.header-img {
+  width: 100vw;
+  opacity: 1;
+  position: relative;
+}
+
+.title-box {
+  max-width: 1500px;
+}
+
+.title {
+  font-size: 7vw;
+  color: green;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+
+.menu {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu li {
+  margin: 5px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid green;
+  text-decoration: none;
+  color: rgb(10, 74, 10);
+}
+
+.menu a:hover {
+  background: rgb(147, 207, 147);
+  color: white;
+}
+
+.menu a.active {
+  background: green;
+  color: white;
+}
+
+.line {
+  width: 1470px;
+  border-top: 3px solid green;
+}
+
+.info-block {
+  padding: 50px;
+}
+
+.home_tea {
+  max-width: 300px;
+  margin: 25px;
+  float: left;
+}
+
+.home_text {
+  font-size: 21px;
+  text-align: justify;
+  margin-bottom: 25px;
+  hyphens: auto;
+}
+
+.type_tea {
+  width: 570px;
+}
