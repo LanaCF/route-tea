@@ -19,16 +19,12 @@ h2 {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.center {
-  text-align: center;
 }
 
 .header-img {
@@ -102,4 +98,43 @@ align-items: center;
 
 .type_tea {
   width: 570px;
+}
+
+.catalog-wrapper {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto 35px;
+  border: 1px solid green;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.catalog-img {
+  width: 270px;
+  margin-right: 47px;
+}
+
+.list-type-tea-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.list-type-tea {
+  margin-top: 35px;
+}
+
+.list-tea {
+  text-align: center;
+  color: rgb(9, 65, 9);
+  font-size: 21px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
 }

@@ -1,71 +1,45 @@
-function renderCatalogPage() {
-    const catalogTea = 
-    `
-    <div class="about-text">
-        <img src="img/type_tea.png" alt="" class="type_tea center">
-
-        <p class="home_text bold center">
-            Класифікація видів та сортів
-        </p>
-
-        <p class="home_text">
-            Ми - ваш провідник у світі чаю. Наш сайт - це ваше онлайн укриття від буденних справ, 
-            де ви можете насолоджуватися широким вибором чаїв з усього світу. Незалежно від того, 
-            чи ви новачок у чайній культурі, чи вже досвідчений знавець, у нас є щось особливе 
-            для кожного.
-        </p>
-    </div>
-    `;
-
-    infoBlock.insertAdjacentHTML('afterend', catalogTea);
-
-    return infoBlock;
+function renderListTypeTea() {
+    teaType.forEach(function(item) {
+        const listTeaHtml = 
+        `
+            <li>&circ; ${ item.type }</li>
+        `;
+        // `
+        //     <li><a href="#${ item.id }" data-path="" class="list-tea"">&circ; ${ item.type }</a></li>
+        // `;
+    
+        listTypeTea.insertAdjacentHTML('beforeend', listTeaHtml);
+    })
 }
 
-// Яким буває чай? Зручна класифікація видів та сортів
-// Класичні напої
+function renderCatalogPage() {
+    teaType.forEach(function(item) {
+        const catalogTea = 
+        `
+        <div class="catalog-wrapper" id="${ item.id }">
+            <div class="catalog-img-box">
+            <img src="${ item.img }" alt="" class="catalog-img">
+            </div>
+    
+            <div class="catalog-text-box">
+    
+            <p class="home_text bold center">
+                ${ item.type }
+            </p>
+    
+            <p class="home_text">
+            ${ item.text }
+            </p>
+            </div>
+        </div>
+        `;
+    
+        infoBlock.insertAdjacentHTML('beforeend', catalogTea);
+    })
+}
 
-// Чорний;
-// Зелений;
-// Жовтий;
-// Білий;
-// Улун;
-// Пуер;
-// Крім того, чаєм споживачі називають настої, отримані з трав, рослин та фруктів:
-
-// Мате;
-// Каркаді;
-// Ройбуш;
-// Анчан;
-// Фіточаї (трав'яні та деревні збори). Поділяються на категорії:;
-    // Суцвіття;
-    // З листя трав;
-    // Коріння трав'яних рослин;
-    // З кори дерев;
-    // З насіння;
-    // Фруктово-ягідні напої, що виготовляються із висушених натуральних плодів;
 
 
 
 
-// function renderCatalogPage() {
-//     infoBlock.innerHTML = 
-//     `
-//     <div class="about-text">
-//         <img src="img/type_tea.png" alt="" class="type_tea center">
 
-//         <p class="home_text bold center">
-//             Класифікація видів та сортів
-//         </p>
-
-//         <p class="home_text">
-//             Ми - ваш провідник у світі чаю. Наш сайт - це ваше онлайн укриття від буденних справ, 
-//             де ви можете насолоджуватися широким вибором чаїв з усього світу. Незалежно від того, 
-//             чи ви новачок у чайній культурі, чи вже досвідчений знавець, у нас є щось особливе 
-//             для кожного.
-//         </p>
-//     </div>
-//     `;
-
-//     return infoBlock;
-// }

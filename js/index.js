@@ -1,10 +1,11 @@
 // console.log(window.location.hash)
+const listTypeTea = document.querySelector('.list-type-tea');
 const infoBlock = document.querySelector('.info-block');
 
 const routes = [
-    { path: '', component: homePage, title: 'Home' },
-    { path: 'about', component: aboutPage, title: 'About' },
-    { path: 'catalog', component: catalogsPage, title: 'Catalog' },
+    { path: '', component: homePage, title: 'Домашня' },
+    { path: 'about', component: aboutPage, title: 'Про нас' },
+    { path: 'catalog', component: catalogsPage, title: 'Каталог' },
     { path: '**', component: notFoundPage, title: '' }
 ];
 
@@ -19,7 +20,7 @@ addEventListener('hashchange', () => {
 function checkRoute() {
     const hash = getHash();
     const listMenu = document.querySelectorAll('.menu a');    
-    let route = routes.find(r => r.path === hash);    
+    let route = routes.find(r => r.path === hash);  
 
     if (!route) {
         route = routes.find(r => r.path === '**');
@@ -44,22 +45,26 @@ function checkRoute() {
 }
 
 function homePage() {
+    listTypeTea.innerHTML = '';
     renderHomePage();
     return '<h2>Home page</h2>';
 }
 
 function aboutPage() {
+    listTypeTea.innerHTML = '';
     renderAboutPage();
     return '<h2>About page</h2>';
 }
 
 function catalogsPage() {
+    listTypeTea.innerHTML = '';
+    infoBlock.innerHTML = '';
+    renderListTypeTea();
     renderCatalogPage();
     return '<h2>Сatalogs page</h2>';
 }
 
 function notFoundPage() {
-    infoBlock.innerHTML = '';
     return `
         <h2>404! Page not found!</h2>
         <a href="#">Home</a>
@@ -136,9 +141,9 @@ function getCurrentPathFromLocalStorage() {
 //     setActiveMenuItem();
 // }
 
+
 // // Перевірка поточного шляху при завантаженні сторінки і встановлення активної кнопки
 // window.addEventListener('load', () => {
 //     checkRoute();
 // });
-
 
