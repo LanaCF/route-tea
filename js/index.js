@@ -38,6 +38,9 @@ function checkRoute() {
            this.classList.add('active');
         }
     });
+
+    saveCurrentPathToLocalStorage();
+    setActiveMenuItem();
 }
 
 function homePage() {
@@ -70,7 +73,8 @@ function render(component) {
 
 function renderHeader() {
     const header = document.querySelector('.header');
-    return header.insertAdjacentHTML('afterbegin', '<img src="https://i.ibb.co/98n9SW1/img-head-bgd.png" alt="" class="header-img">');
+    return header.insertAdjacentHTML('afterbegin', '<img src="/img/img_head_bgd.png" alt="" class="header-img">');
+    // return header.insertAdjacentHTML('afterbegin', '<img src="https://i.ibb.co/98n9SW1/img-head-bgd.png" alt="" class="header-img">');
 }
 
 function renderMenu() {
@@ -90,6 +94,18 @@ function renderMenu() {
     }
 }
 
+function setActiveMenuItem() {
+    const currentPath = getCurrentPathFromLocalStorage();
+    const menuLinks = document.querySelectorAll('.menu a');
+    menuLinks.forEach(link => {
+        if (link.getAttribute('href').slice(1) === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
 function getHash() {
     const hash = window.location.hash;
     return hash.slice(1);
@@ -100,38 +116,16 @@ function saveCurrentPathToLocalStorage() {
     localStorage.setItem('currentPath', currentPath);
 }
 
+function getCurrentPathFromLocalStorage() {
+    return localStorage.getItem('currentPath');
+}
 
 
 
 
-// // Функція для отримання поточного шляху з хешем
-// function getHash() {
-//     return window.location.hash.slice(1);
-// }
 
-// // Функція для збереження поточного шляху у локальне сховище
-// function saveCurrentPathToLocalStorage() {
-//     const currentPath = getHash();
-//     localStorage.setItem('currentPath', currentPath);
-// }
 
-// // Функція для отримання збереженого шляху з локального сховища
-// function getCurrentPathFromLocalStorage() {
-//     return localStorage.getItem('currentPath');
-// }
 
-// // Функція для встановлення активної кнопки в меню відповідно до поточного шляху
-// function setActiveMenuItem() {
-//     const currentPath = getCurrentPathFromLocalStorage();
-//     const menuLinks = document.querySelectorAll('.menu a');
-//     menuLinks.forEach(link => {
-//         if (link.getAttribute('href').slice(1) === currentPath) {
-//             link.classList.add('active');
-//         } else {
-//             link.classList.remove('active');
-//         }
-//     });
-// }
 
 // // Перевірка поточного шляху при кожному кліку на кнопку меню і збереження нового шляху
 // function checkRoute() {
@@ -146,3 +140,5 @@ function saveCurrentPathToLocalStorage() {
 // window.addEventListener('load', () => {
 //     checkRoute();
 // });
+
+

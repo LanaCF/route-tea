@@ -1,6 +1,68 @@
 const teaType = [
-    { id: 1, : '', component: homePage, title: 'Home' },
-    { path: 'about', component: aboutPage, title: 'About' },
-    { path: 'catalog', component: catalogsPage, title: 'Catalog' },
-    { path: '**', component: notFoundPage, title: '' }
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    },
+
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    },
+
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    },
+
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    },
+
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    },
+
+    { 
+        id: 1, 
+        type: '', 
+        component: homePage, 
+        title: 'Home' 
+    }
 ];
+
+
+
+// Яким буває чай? Зручна класифікація видів та сортів
+// Класичні напої
+
+// Чорний;
+// Зелений;
+// Жовтий;
+// Білий;
+// Улун;
+// Пуер;
+// Крім того, чаєм споживачі називають настої, отримані з трав, рослин та фруктів:
+
+// Мате;
+// Каркаді;
+// Ройбуш;
+// Анчан;
+// Фіточаї (трав'яні та деревні збори). Поділяються на категорії:;
+    // Суцвіття;
+    // З листя трав;
+    // Коріння трав'яних рослин;
+    // З кори дерев;
+    // З насіння;
+    // Фруктово-ягідні напої, що виготовляються із висушених натуральних плодів;
