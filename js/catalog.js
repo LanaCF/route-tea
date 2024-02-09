@@ -1,5 +1,5 @@
 function renderCatalogPage() {
-    infoBlock.innerHTML = 
+    const catalogTeaBox = 
     `
     <div class="about-text">
         <img src="img/type_tea.png" alt="" class="type_tea center">
