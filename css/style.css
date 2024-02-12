@@ -117,7 +117,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1000px;
-  margin: 0 auto 35px;
+  margin: 35px auto 35px;
   border: 1px solid green;
   border-radius: 15px;
   padding: 25px;

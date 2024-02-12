@@ -1,3 +1,17 @@
+function renderListTypeTea() {
+    teaType.forEach(function(item) {
+        const listTeaHtml = 
+        `
+            <li>&circ; ${ item.type }</li>
+        `;
+        // `
+        //     <li><a href="#${ item.id }" data-path="" class="list-tea"">&circ; ${ item.type }</a></li>
+        // `;
+    
+        listTypeTea.insertAdjacentHTML('beforeend', listTeaHtml);
+    })
+}
+
 function renderCatalogPage() {
     teaType.forEach(function(item) {
         const catalogTea = 
@@ -23,5 +37,9 @@ function renderCatalogPage() {
         infoBlock.insertAdjacentHTML('beforeend', catalogTea);
     })
 }
+
+
+
+
 
 
